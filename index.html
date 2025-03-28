@@ -22,52 +22,54 @@
 
     <script>
         tailwind.config = {
-            darkMode: 'media',
             theme: {
                 extend: {
                     animation: {
                         'spin-slow': 'spin 2s linear infinite',
                     },
                     colors: {
-                        background: '#fcf9e8',
-                        text: '#5c4b0a',
-                        'dark-bg': '#1a1a1a',
-                        'dark-text': '#f0e68c'
-                    }
+                        background: '#1a1a1a',
+                        text: '#c9a32d'
+                    },
+
                 }
             }
         };
     </script>
 </head>
-<body class="bg-[theme('colors.background')] dark:bg-[theme('colors.dark-bg')] text-[theme('colors.text')] dark:text-[theme('colors.dark-text')] text-center px-8 py-12 overflow-x-hidden">
+
+<body class="bg-[theme('colors.background')] text-[theme('colors.text')] text-center px-8 py-12 overflow-x-hidden">
+
 <h1 class="text-4xl mb-6 drop-shadow-sm crazy select-none">
     POOPECOIN
 </h1>
-<div class="text-me mb-8 crazy">
-    <span class="vibrate"><span class="select-none text-[#838A2A]">$POOPEC</span></span>
+
+<div class="text-xs mb-6 crazy">
+    <span class="select-none">$POOPEC</span>
 </div>
+
 <div class="relative inline-block">
     <img src="static/images/poope.png" alt="Logo" id="logo"
          class="max-w-[250px] mx-auto mb-8 drop-shadow-[0_0_8px_#c9a32d] cursor-pointer">
     <div class="speech-bubble sm:block select-none" id="bubble">ayyy fren… <br>click 4 majik</div>
 </div>
+
 <p class="text-base max-w-xl mx-auto leading-relaxed select-none crazy text-sm">
     It’s me, Poope. The bastard child of Pepe and poop.
     <br><br>
     No roadmap. No utility. No promises. Just pure meme entropy and a community
     that should be on several watchlists.
     <br><br>
-    You either hold $POOPEC and embrace the poopocalypse, or get farmed like a Discord NPC chasing the next “real”
-    project.
+    You either hold $POOPEC and embrace the poopocalypse, or get farmed like a Discord NPC chasing the next “real” project.
 </p>
 
-<div class="mt-8">
+<div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
     <button id="connect-wallet"
-            class="sm:mr-2 bg-yellow-300 dark:bg-yellow-600 text-black dark:text-white px-6 py-3 rounded-xl text-sm font-bold hover:scale-105 transition-transform duration-300 shadow-md">
-        Connect Wallet
+            class="bg-yellow-600 text-white px-6 py-3 rounded-xl text-sm font-bold hover:scale-105 transition-transform duration-300 shadow-md">
+        Connect
     </button>
-    <a href="https://example.com/buy-poopec" target="_blank"
-       class="bg-green-300 dark:bg-green-600 text-black dark:text-white px-6 py-3 rounded-xl text-sm font-bold hover:scale-105 transition-transform duration-300 shadow-md inline-block">
+    <a href="" target="_blank"
+       class="bg-green-600 text-white px-6 py-3 rounded-xl text-sm font-bold hover:scale-105 transition-transform duration-300 shadow-md inline-block">
         Buy
     </a>
 </div>
