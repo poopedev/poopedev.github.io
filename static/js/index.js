@@ -128,7 +128,7 @@ function spawnMemes(count = 50, durationMs = 30000) {
             img.src = src;
 
             const customClass = memeClasses[src];
-            img.className = `${customClass} fixed z-50 pointer-events-none` + flippy();
+            img.className = `${customClass} fixed z-50 pointer-events-none ` + flippy();
 
             const size = Math.floor(Math.random() * 30) + 30;
             const x = Math.random() * window.innerWidth;
