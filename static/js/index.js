@@ -18,7 +18,7 @@ const speechQueue = [];
 connectWallet.addEventListener('click', (event) => {
     if (alreadyFartedWeak) {
         speechBubble.textContent = 'wallet disconnected'
-        connectWallet.textContent = 'Connect Wallet'
+        connectWallet.textContent = 'Connect'
         alreadyFartedWeak = false
         disconFart.muted = false;
         disconFart.volume = 1.0;
@@ -28,7 +28,7 @@ connectWallet.addEventListener('click', (event) => {
         connFart.volume = 1.0;
         connFart.play()
         speechBubble.textContent = 'lmao...wallet connected'
-        connectWallet.textContent = 'Disconnect Wallet'
+        connectWallet.textContent = 'Disconnect'
         alreadyFartedWeak = true
     }
 })
@@ -52,8 +52,7 @@ const runSpeechQueue = () => {
     for (const {text, delay, callback} of speechQueue) {
         totalDelay += delay;
         setTimeout(() => {
-            speechBubble.textContent = text;
-            console.log(callback)
+            speechBubble.innerHTML = text;
             if (callback) callback();
         }, totalDelay);
     }
@@ -152,8 +151,8 @@ function spawnMemes(count = 50, durationMs = 30000) {
 }
 
 const startCrazyShit = () => {
-    scheduleSpeech("wait… coolest part drops soon.", 0);
-    scheduleSpeech("wait wait... almost there.", 7000);
+    scheduleSpeech("wait…", 0);
+    scheduleSpeech("wait wait... <br>almost there.", 7000);
     scheduleSpeech("vibe shit, innit?", 8000, () => spawnMemes(45, 30000));
 
     runSpeechQueue();
