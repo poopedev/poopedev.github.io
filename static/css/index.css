@@ -85,13 +85,14 @@ body {
     top: 20%;
     left: 100%;
     transform: translateY(-50%);
-    background: #d9d6d6;
-    color: black;
-    padding: 10px 18px;
-    border-radius: 1.5rem;
-    font-size: 9px;
+    background: #BC962B;
+    color: #0f0f0f;
+    padding: 12px 20px;
+    border-radius: 1.25rem;
+    font-size: 10px;
     font-family: 'Press Start 2P', cursive;
     white-space: nowrap;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     z-index: 10;
+    border: 1px solid #3f523f;
 }
