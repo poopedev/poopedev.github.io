@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Poopecoin - $POOPEC</title>
+    <meta name="description" content="The bastard meme child of frog and feces."/>
+    <link rel="canonical" href="https://poope.org/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a142bcd3be.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+    <link href="static/css/index.css" rel="stylesheet"/>
+    <meta property="og:title" content="Poopecoin - $POOPEC">
+    <meta property="og:description" content="The bastard meme child of frog and feces.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://poope.org/">
+    <meta property="og:image" content="https://poope.org/static/images/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Poopecoin - $POOPEC">
+    <meta name="twitter:description" content="The bastard meme child of frog and feces.">
+    <meta name="twitter:image" content="https://poope.org/static/images/preview.png">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    animation: {
+                        'spin-slow': 'spin 2s linear infinite',
+                    },
+                    colors: {
+                        background: '#fcf9e8',
+                        text: '#5c4b0a',
+                        'dark-bg': '#1a1a1a',
+                        'dark-text': '#f0e68c'
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-[theme('colors.background')] dark:bg-[theme('colors.dark-bg')] text-[theme('colors.text')] dark:text-[theme('colors.dark-text')] text-center px-8 py-12 overflow-x-hidden">
+<h1 class="text-4xl mb-6 drop-shadow-sm crazy select-none">
+    POOPECOIN
+</h1>
+<div class="text-me mb-8 crazy">
+    <span class="vibrate"><span class="select-none text-[#838A2A]">$POOPEC</span></span>
+</div>
+<div class="relative inline-block">
+    <img src="static/images/poope.png" alt="Logo" id="logo"
+         class="max-w-[250px] mx-auto mb-8 drop-shadow-[0_0_8px_#c9a32d] cursor-pointer">
+    <div class="speech-bubble sm:block select-none" id="bubble">ayyy fren… <br>click 4 majik</div>
+</div>
+<p class="text-base max-w-xl mx-auto leading-relaxed select-none crazy text-sm">
+    It’s me, Poope. The bastard child of Pepe and Poop.
+    <br><br>
+    No roadmap. No utility. No promises. Just pure meme entropy and a community
+    that should be on several watchlists.
+    <br><br>
+    You either hold $POOPEC and embrace the poopocalypse, or get farmed like a Discord NPC chasing the next “real”
+    project.
+</p>
+
+<div class="mt-8">
+    <button id="connect-wallet"
+            class="sm:mr-2 bg-yellow-300 dark:bg-yellow-600 text-black dark:text-white px-6 py-3 rounded-xl text-sm font-bold hover:scale-105 transition-transform duration-300 shadow-md">
+        Connect Wallet
+    </button>
+    <a href="https://example.com/buy-poopec" target="_blank"
+       class="bg-green-300 dark:bg-green-600 text-black dark:text-white px-6 py-3 rounded-xl text-sm font-bold hover:scale-105 transition-transform duration-300 shadow-md inline-block">
+        Buy
+    </a>
+</div>
+
+<div class="mt-10">
+    <div class="flex justify-center gap-6 flex-wrap text-2xl">
+        <a href="https://x.com/poopereal" target="_blank"
+           class="hover:scale-125 transition-transform duration-300 crazy" aria-label="X">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://t.me/poopecoin" target="_blank"
+           class="hover:scale-125 transition-transform duration-300 crazy" aria-label="Telegram">
+            <i class="fab fa-telegram"></i>
+        </a>
+    </div>
+</div>
+
+<audio id="bg-music" src="static/audio/vibe.mp3" loop muted></audio>
+<audio id="fart" src="static/audio/fart.mp3" muted></audio>
+<audio id="connFart" src="static/audio/connected.mp3" muted></audio>
+<audio id="disconFart" src="static/audio/disconnected.mp3" muted></audio>
+<script src="static/js/index.js"></script>
+</body>
+</html>
