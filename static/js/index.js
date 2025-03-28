@@ -112,9 +112,11 @@ const memeImages = [
 
 const memeClasses = {
     'static/images/angry-wojak.gif': 'doge mx-auto max-w-[50px] inline-block',
-    'static/images/soyboy.gif': 'doge mx-auto max-w-[55px] scale-x-[-1] inline-block',
-    'static/images/doge.gif': 'doge mx-auto max-w-[35px] crazy inline-block scale-x-[-1]'
+    'static/images/soyboy.gif': 'doge mx-auto max-w-[55px] inline-block',
+    'static/images/doge.gif': 'doge mx-auto max-w-[35px] inline-block'
 };
+
+const flippy = () => ['scale-x-[-1]', ''][Math.random() < 0.5 ? 0 : 1];
 
 function spawnMemes(count = 50, durationMs = 30000) {
     const interval = durationMs / count;
@@ -126,7 +128,7 @@ function spawnMemes(count = 50, durationMs = 30000) {
             img.src = src;
 
             const customClass = memeClasses[src];
-            img.className = `${customClass} fixed z-50 pointer-events-none`;
+            img.className = `${customClass} fixed z-50 pointer-events-none` + flippy();
 
             const size = Math.floor(Math.random() * 30) + 30;
             const x = Math.random() * window.innerWidth;
