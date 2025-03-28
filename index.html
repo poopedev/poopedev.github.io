@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>POOPECOIN - $POOPEC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a142bcd3be.js" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    animation: {
+                        'spin-slow': 'spin 2s linear infinite',
+                    },
+                    colors: {
+                        background: '#fcf9e8',
+                        text: '#5c4b0a',
+                        'dark-bg': '#1a1a1a',
+                        'dark-text': '#f0e68c'
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        @keyframes vibrate {
+            0% {
+                transform: translate(0);
+            }
+            25% {
+                transform: translate(1px, -1px);
+            }
+            50% {
+                transform: translate(-1px, 1px);
+            }
+            75% {
+                transform: translate(1px, 1px);
+            }
+            100% {
+                transform: translate(-1px, -1px);
+            }
+        }
+
+        .vibrate {
+            display: inline-block;
+            animation: vibrate 0.8s infinite;
+        }
+
+        .vibrate-crazy {
+            animation: vibrate 0.1s infinite;
+        }
+
+        @keyframes rainbow {
+            0% {
+                color: red;
+            }
+            20% {
+                color: orange;
+            }
+            40% {
+                color: yellow;
+            }
+            60% {
+                color: lime;
+            }
+            80% {
+                color: cyan;
+            }
+            100% {
+                color: magenta;
+            }
+        }
+
+        .rainbow {
+            animation: rainbow 1s linear infinite;
+        }
+
+        @keyframes pulse-crazy {
+            0%, 100% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.3);
+            }
+            50% {
+                transform: scale(0.8);
+            }
+            75% {
+                transform: scale(1.2);
+            }
+        }
+
+        .crazy-scale {
+            animation: pulse-crazy 1s infinite;
+        }
+
+        .speech-bubble {
+            position: absolute;
+            top: 20%;
+            left: 100%;
+            transform: translateY(-50%);
+            background: white;
+            color: black;
+            padding: 10px 18px;
+            border-radius: 1.5rem;
+            font-size: 9px;
+            font-family: 'Press Start 2P', cursive;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .speech-bubble {
+                background: #fff;
+                color: #000;
+            }
+
+            .speech-bubble::after {
+                background: #fff;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[theme('colors.background')] dark:bg-[theme('colors.dark-bg')] text-[theme('colors.text')] dark:text-[theme('colors.dark-text')] text-center px-8 py-12 overflow-x-hidden">
+<h1 class="text-4xl mb-6 drop-shadow-sm crazy select-none">
+    POOPECOIN
+</h1>
+<div class="text-me mb-8 crazy">
+    <span class="vibrate"><span class="select-none text-[#838A2A]">$POOPEC</span></span>
+</div>
+<div class="relative inline-block">
+    <img src="static/images/green.png" alt="Logo" id="logo"
+         class="max-w-[250px] mx-auto mb-8 drop-shadow-[0_0_8px_#c9a32d] cursor-pointer">
+    <div class="speech-bubble sm:block select-none" id="bubble">ayyy fren… <br>click 4 majik</div>
+</div>
+<p class="text-base max-w-xl mx-auto leading-relaxed select-none crazy text-sm">
+    It’s me, Poope. Not “Pepe,” you illiterate fucks — it was always Poope. You just refused to believe a name that dumb
+    could be real.
+    <br><br>
+    No roadmap. No utility. No VC handjobs.
+    Just pure meme magic and a community of actual schizos.
+    <br><br>
+    You either buy $POOPEC and marinate in the stink,
+    or crawl back to your Discord pumps and get slow-rugged by another “innovative” scamcoin.
+</p>
+
+<div class="mt-8">
+    <button id="connect-wallet"
+            class="bg-yellow-300 dark:bg-yellow-600 text-black dark:text-white px-6 py-3 rounded-xl text-sm font-bold hover:scale-105 transition-transform duration-300 shadow-md">
+        Connect Wallet
+    </button>
+    <a href="https://example.com/buy-poopec" target="_blank"
+       class="bg-green-300 dark:bg-green-600 text-black dark:text-white px-6 py-3 rounded-xl text-sm font-bold hover:scale-105 transition-transform duration-300 shadow-md inline-block">
+        Buy
+    </a>
+</div>
+
+<div class="mt-10">
+    <div class="flex justify-center gap-6 flex-wrap text-2xl">
+        <a href="https://x.com/poopereal" target="_blank"
+           class="hover:scale-125 transition-transform duration-300 crazy" aria-label="X">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://t.me/poopecoin" target="_blank"
+           class="hover:scale-125 transition-transform duration-300 crazy" aria-label="Telegram">
+            <i class="fab fa-telegram"></i>
+        </a>
+    </div>
+</div>
+
+<audio id="bg-music" src="static/audio/vibe.mp3" loop muted></audio>
+<audio id="fart" src="static/audio/fart.mp3" muted></audio>
+<audio id="connFart" src="static/audio/connected.mp3" muted></audio>
+<audio id="disconFart" src="static/audio/disconnected.mp3" muted></audio>
+<script>
+    const bgMusic = document.getElementById('bg-music');
+    const fart = document.getElementById('fart');
+    const connFart = document.getElementById('connFart');
+    const disconFart = document.getElementById('disconFart');
+    const logo = document.getElementById('logo');
+    const crazyElements = document.querySelectorAll('.crazy');
+    const vibrates = document.querySelectorAll('.vibrate');
+    const speechBubble = document.getElementById('bubble');
+    const connectWallet = document.getElementById('connect-wallet');
+
+    let crazyMode = false;
+    let alreadyFarted = false;
+    let alreadyFartedWeak = false
+    let clickLocked = false;
+    const speechQueue = [];
+
+
+
+    connectWallet.addEventListener('click', (event) => {
+        if (alreadyFartedWeak) {
+            speechBubble.textContent = 'wallet disconnected'
+            connectWallet.textContent = 'Connect Wallet'
+            alreadyFartedWeak = false
+            disconFart.muted = false;
+            disconFart.volume = 1.0;
+            disconFart.play()
+        } else {
+            connFart.muted = false;
+            connFart.volume = 1.0;
+            connFart.play()
+            speechBubble.textContent = 'lmao...wallet connected'
+            connectWallet.textContent = 'Disconnect Wallet'
+            alreadyFartedWeak = true
+        }
+    })
+
+    const scheduleSpeech = (text, delay, callback) => {
+        speechQueue.push({text, delay, callback});
+    };
+
+    speechBubble.addEventListener('mouseenter', (event) => {
+        const originalHtml = event.target.innerHTML
+        if (event.target.textContent.includes('click')) {
+            speechBubble.addEventListener('mouseleave', (event) => {
+                event.target.innerHTML = originalHtml
+            })
+            event.target.innerHTML = 'bruh... <br>click on my image';
+        }
+    })
+
+    const runSpeechQueue = () => {
+        let totalDelay = 0;
+        for (const {text, delay, callback} of speechQueue) {
+            totalDelay += delay;
+            setTimeout(() => {
+                speechBubble.textContent = text;
+                console.log(callback)
+                if (callback) callback();
+            }, totalDelay);
+        }
+        speechQueue.length = 0;
+    };
+
+    const toggleCrazyEffects = (state) => {
+        crazyElements.forEach(el => el.classList.toggle('rainbow', state));
+        vibrates.forEach(v => v.classList.toggle('vibrate-crazy', state));
+
+        if (state) {
+            logo.classList.add('animate-spin-slow', 'crazy-scale');
+            bgMusic.muted = false;
+            bgMusic.volume = 1.0;
+            bgMusic.play();
+            fart.pause();
+        } else {
+            logo.classList.remove('animate-spin-slow', 'crazy-scale');
+            bgMusic.muted = true;
+            bgMusic.pause();
+            fart.pause();
+        }
+    };
+
+    const handleFart = () => {
+        if (!alreadyFarted) {
+            clickLocked = true
+            speechBubble.textContent = "3...";
+
+            setTimeout(() => {
+                speechBubble.textContent = "2...";
+                setTimeout(() => {
+                    speechBubble.textContent = "1...";
+                }, 3150)
+            }, 3000)
+
+            fart.muted = false;
+            fart.play();
+            bgMusic.pause();
+            alreadyFarted = true;
+
+            setTimeout(() => {
+                speechBubble.innerHTML = "ritual complete. <br>now click 4 real majik.";
+                clickLocked = false
+            }, 8500);
+
+            return true;
+        }
+        return false;
+    };
+
+    const memeImages = [
+        'static/images/soyboy.gif',
+        'static/images/angry-wojak.gif',
+        'static/images/doge.gif'
+    ];
+
+    const memeClasses = {
+        'static/images/angry-wojak.gif': 'doge mx-auto max-w-[50px] inline-block',
+        'static/images/soyboy.gif': 'doge mx-auto max-w-[45px] scale-x-[-1] inline-block',
+        'static/images/doge.gif': 'doge mx-auto max-w-[35px] crazy inline-block scale-x-[-1]'
+    };
+
+    function spawnMemes(count = 50, durationMs = 30000) {
+        const interval = durationMs / count;
+
+        for (let i = 0; i < count; i++) {
+            setTimeout(() => {
+                const src = memeImages[Math.floor(Math.random() * memeImages.length)];
+                const img = document.createElement('img');
+                img.src = src;
+
+                const customClass = memeClasses[src];
+                img.className = `${customClass} fixed z-50 pointer-events-none`;
+
+                const size = Math.floor(Math.random() * 30) + 30;
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * window.innerHeight;
+
+                img.style.width = `${size}px`;
+                img.style.left = `${x}px`;
+                img.style.top = `${y}px`;
+                img.style.position = 'fixed';
+                img.style.transform += ' translate(-50%, -50%)';
+                img.style.transition = 'opacity 2s ease-out';
+                img.style.opacity = '1';
+
+                document.body.appendChild(img);
+
+                setTimeout(() => {
+                    img.style.opacity = '0';
+                    setTimeout(() => img.remove(), 2000);
+                }, 30000 + Math.random() * 2000);
+            }, i * interval);
+        }
+    }
+
+    const startCrazyShit = () => {
+        scheduleSpeech("wait… coolest part drops soon.", 0);
+        scheduleSpeech("wait wait... almost there.", 7000);
+        scheduleSpeech("vibe shit, innit?", 8000, () => spawnMemes(45, 30000)); // Total 15s delay
+
+        runSpeechQueue();
+    };
+
+    logo.addEventListener('click', () => {
+        if (clickLocked) return;
+
+        if (handleFart()) return;
+
+        crazyMode = !crazyMode;
+        toggleCrazyEffects(crazyMode);
+
+        if (crazyMode) {
+            startCrazyShit();
+        }
+    });
+</script>
+</body>
+</html>
