@@ -4,20 +4,20 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Poopecoin - $POOPEC</title>
-    <meta name="description" content="The bastard meme child of frog and feces."/>
+    <meta name="description" content="The unholy spawn of frog and feces."/>
     <link rel="canonical" href="https://poope.org/">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/a142bcd3be.js" crossorigin="anonymous"></script>
     <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
     <link href="static/css/index.css" rel="stylesheet"/>
     <meta property="og:title" content="Poopecoin - $POOPEC">
-    <meta property="og:description" content="The bastard meme child of frog and feces.">
+    <meta property="og:description" content="The unholy spawn of frog and feces.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://poope.org/">
     <meta property="og:image" content="https://poope.org/static/images/preview.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Poopecoin - $POOPEC">
-    <meta name="twitter:description" content="The bastard meme child of frog and feces.">
+    <meta name="twitter:description" content="The unholy spawn of frog and feces.">
     <meta name="twitter:image" content="https://poope.org/static/images/preview.png">
 
     <script>
@@ -29,8 +29,8 @@
                     },
                     colors: {
                         background: '#0f0f0f',
-                        text: '#798d3e',
-                        accent: '#C9A32D',
+                        text: 'rgb(201 163 45 / var(--tw-text-opacity, 1))',
+                        accent: '#798d3e',
                         toxic: '#FDD835',
                         frog: '#66BB6A',
                         border: '#5D4037',
@@ -45,39 +45,58 @@
 
 <body class="bg-[theme('colors.background')] text-[theme('colors.text')] text-center px-8 py-12 overflow-x-hidden">
 
-<h1 class="text-4xl mb-4 drop-shadow-sm crazy select-none">
-    $POOPEC
-</h1>
+<nav class="w-full flex justify-center items-center mb-5">
+    <ul class="flex flex-wrap gap-6 text-[10px] font-bold uppercase crazy">
+        <li><a id="show-home" class="hover:text-accent cursor-pointer transition-colors duration-200">Home</a></li>
+        <li><a id="show-roadmap" class="hover:text-accent cursor-pointer transition-colors duration-200">Roadmap</a></li>
+        <li><a href="/static/pdf/Poopecoin_Brownpaper.pdf" class="hover:text-accent transition-colors duration-200">Brownpaper</a>
+        </li>
+    </ul>
+</nav>
 
-<div class="text-xs mb-6 crazy">
-    <span class="select-none">Poopecoin</span>
-</div>
-
-<div class="relative inline-block">
-    <img src="static/images/poope.png" alt="Logo" id="logo"
-         class="max-w-[250px] mx-auto mb-8 drop-shadow-[0_0_8px_#c9a32d] cursor-pointer">
-    <div class="speech-bubble sm:block select-none" id="bubble">ay fren… <br>click 4 majik</div>
-</div>
-
-<p class="text-base max-w-xl mx-auto leading-relaxed select-none crazy text-sm">
-    It’s me, Poope. The bastard child of Pepe and poop.
-    <br><br>
-    No roadmap. No utility. No promises. Just pure meme entropy and a community
-    that should be on several watchlists.
-    <br><br>
-    You either hold $POOPEC and embrace the poopocalypse, or get farmed like a Discord NPC chasing the next “real” project.
-</p>
-
-<div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-    <button id="connect-wallet"
-            class="bg-yellow-600 text-white px-6 py-3 rounded-xl text-sm font-bold hover:scale-105 transition-transform duration-300 shadow-md">
-        Connect
-    </button>
-    <a href="" target="_blank"
-       class="bg-green-600 text-white px-6 py-3 rounded-xl text-sm font-bold hover:scale-105 transition-transform duration-300 shadow-md inline-block">
-        Buy
+<section id="home">
+    <a href="/" class="text-5xl mb-4 drop-shadow-sm crazy select-none">
+        <span class="hover:text-accent transition-colors duration-200">poope</span>coin
     </a>
-</div>
+
+    <div class="text-xs mb-6 crazy mt-3">
+        <span class="select-none ">$POOPEC</span>
+    </div>
+    <div class="relative inline-block">
+        <img src="static/images/poope.png" alt="Logo" id="logo"
+             class="max-w-[220px] mx-auto mb-8 drop-shadow-[0_0_8px_#c9a32d] select-none cursor-pointer">
+        <div class="speech-bubble sm:block select-none" id="bubble">ay fren... <br>click 4 majik</div>
+    </div>
+    <p class="text-base max-w-xl mx-auto leading-relaxed select-none crazy text-sm">
+        It’s me, Poope — the unholy spawn of Pepe and poop.<br><br>
+        You either ape into $POOPEC and embrace the poopocalypse, or keep chasing your 18th “serious” project and get
+        farmed like a Discord NPC.
+    </p>
+
+    <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-2">
+        <button id="connect-wallet"
+                class="bg-yellow-600 text-white px-4 py-2 rounded-xl text-sm font-bold hover:scale-105 transition-transform duration-300 shadow-md">
+            Connect
+        </button>
+        <a href="" target="_blank"
+           class="bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-bold hover:scale-105 transition-transform duration-300 shadow-md inline-block">Buy</a>
+    </div>
+
+</section>
+
+<section id="roadmap" class="mt-20 hidden">
+    <h2 class="text-3xl mb-4 font-bold crazy">Roadmap</h2>
+    <p class="text-sm max-w-xl mx-auto leading-relaxed crazy">
+        W1: launch. panic. shitpost.<br>
+        W2: rug accusations. meme war erupts.<br>
+        W3: $POOPEC cult forms. chart ignores gravity.<br>
+        W4: dev loses his seed phrase. coin keeps pumping.<br>
+        W5: blackrock apes in. bankrupt by Tuesday.<br>
+        W6: $POOPEC becomes world reserve.<br>
+        W7: elon tweets “$POOPEC > gold” then vanishes into the woods.<br>
+        W8: final dump initiated. no survivors.
+    </p>
+</section>
 
 <div class="mt-10">
     <div class="flex justify-center gap-6 flex-wrap text-2xl">
@@ -85,8 +104,8 @@
            class="hover:scale-125 transition-transform duration-300 crazy" aria-label="X">
             <i class="fab fa-x-twitter"></i>
         </a>
-        <a href="https://t.me/poopecoin" target="_blank"
-           class="hover:scale-125 transition-transform duration-300 crazy" aria-label="Telegram">
+        <a href="https://t.me/poopecoin" target="_blank" class="hover:scale-125 transition-transform duration-300 crazy"
+           aria-label="Telegram">
             <i class="fab fa-telegram"></i>
         </a>
     </div>
@@ -96,6 +115,24 @@
 <audio id="fart" src="static/audio/fart.mp3" muted></audio>
 <audio id="connFart" src="static/audio/connected.mp3" muted></audio>
 <audio id="disconFart" src="static/audio/disconnected.mp3" muted></audio>
+<script type="application/javascript">
+    const home = document.getElementById('home');
+    const roadmap = document.getElementById('roadmap');
+    const showRoadmap = document.getElementById('show-roadmap');
+    const showHome = document.getElementById('show-home');
+
+    showRoadmap.addEventListener('click', () => {
+        home.classList.add('hidden');
+        roadmap.classList.remove('hidden');
+        console.log('b')
+    })
+
+    showHome.addEventListener('click', () => {
+        roadmap.classList.add('hidden');
+        home.classList.remove('hidden');
+        console.log('a')
+    })
+</script>
 <script src="static/js/index.js"></script>
 </body>
 </html>
