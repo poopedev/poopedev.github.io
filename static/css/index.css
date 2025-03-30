@@ -89,10 +89,9 @@ body {
     color: #0f0f0f;
     padding: 12px 20px;
     border-radius: 1.25rem;
-    font-size: 10px;
+    font-size: 9px;
     font-family: 'Press Start 2P', cursive;
     white-space: nowrap;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     z-index: 10;
-    border: 1px solid #3f523f;
 }
