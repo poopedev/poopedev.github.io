@@ -7,12 +7,18 @@ const crazyElements = document.querySelectorAll('.crazy');
 const vibrates = document.querySelectorAll('.vibrate');
 const speechBubble = document.getElementById('bubble');
 const connectWallet = document.getElementById('connect-wallet');
+const cookiePopup = document.getElementById('cookie-popup')
+const acceptCookies = document.getElementById('accept-cookies')
 
 let crazyMode = false;
 let alreadyFarted = false;
 let alreadyFartedWeak = false
 let clickLocked = false;
 const speechQueue = [];
+
+acceptCookies.addEventListener('click', (event) => {
+    cookiePopup.classList.add('hidden');
+})
 
 
 connectWallet.addEventListener('click', (event) => {
