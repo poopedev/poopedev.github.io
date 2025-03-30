@@ -4,11 +4,11 @@ const connFart = document.getElementById('connFart');
 const disconFart = document.getElementById('disconFart');
 const logo = document.getElementById('logo');
 const crazyElements = document.querySelectorAll('.crazy');
-const vibrates = document.querySelectorAll('.vibrate');
 const speechBubble = document.getElementById('bubble');
 const connectWallet = document.getElementById('connect-wallet');
 const cookiePopup = document.getElementById('cookie-popup')
 const acceptCookies = document.getElementById('accept-cookies')
+const vibratables = document.querySelectorAll('.vibratable');
 
 let crazyMode = false;
 let alreadyFarted = false;
@@ -19,6 +19,12 @@ const speechQueue = [];
 acceptCookies.addEventListener('click', (event) => {
     cookiePopup.classList.add('hidden');
 })
+
+const vibrate = (element) => {
+    vibratables.forEach((item) => {
+        item.classList.toggle('vibrate')
+    })
+}
 
 
 connectWallet.addEventListener('click', (event) => {
@@ -67,7 +73,6 @@ const runSpeechQueue = () => {
 
 const toggleCrazyEffects = (state) => {
     crazyElements.forEach(el => el.classList.toggle('rainbow', state));
-    vibrates.forEach(v => v.classList.toggle('vibrate-crazy', state));
 
     if (state) {
         logo.classList.add('animate-spin-slow', 'crazy-scale');
@@ -75,11 +80,13 @@ const toggleCrazyEffects = (state) => {
         bgMusic.volume = 1.0;
         bgMusic.play();
         fart.pause();
+        vibrate()
     } else {
         logo.classList.remove('animate-spin-slow', 'crazy-scale');
         bgMusic.muted = true;
         bgMusic.pause();
         fart.pause();
+        vibrate()
     }
 };
 
@@ -118,7 +125,7 @@ const memeImages = [
 
 const memeClasses = {
     'static/images/angry-wojak.gif': 'doge mx-auto max-w-[50px] inline-block',
-    'static/images/soyboy.gif': 'doge mx-auto max-w-[55px] inline-block',
+    'static/images/soyboy.gif': 'doge mx-auto max-w-[65px] inline-block',
     'static/images/doge.gif': 'doge mx-auto max-w-[35px] inline-block'
 };
 
