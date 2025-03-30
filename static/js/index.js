@@ -17,7 +17,7 @@ const speechQueue = [];
 
 connectWallet.addEventListener('click', (event) => {
     if (alreadyFartedWeak) {
-        speechBubble.textContent = 'wallet disconnected'
+        speechBubble.innerHTML = 'wallet disconnected<br>or whatever...'
         connectWallet.textContent = 'Connect'
         alreadyFartedWeak = false
         disconFart.muted = false;
@@ -27,7 +27,7 @@ connectWallet.addEventListener('click', (event) => {
         connFart.muted = false;
         connFart.volume = 1.0;
         connFart.play()
-        speechBubble.textContent = 'lmao...wallet connected'
+        speechBubble.innerHTML = 'lmao...wallet connected<br>i guess'
         connectWallet.textContent = 'Disconnect'
         alreadyFartedWeak = true
     }
@@ -43,7 +43,7 @@ speechBubble.addEventListener('mouseenter', (event) => {
         speechBubble.addEventListener('mouseleave', (event) => {
             event.target.innerHTML = originalHtml
         })
-        event.target.innerHTML = 'bruh... <br>click on my image';
+        event.target.innerHTML = 'bruh...';
     }
 })
 
