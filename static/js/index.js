@@ -77,6 +77,7 @@ connectWallet.addEventListener('click', (event) => {
     if (alreadyFartedWeak) {
         speechBubble.innerHTML = 'wallet disconnected<br>or whatever...'
         connectWallet.innerHTML = '<i class="fas fa-wallet"></i> Connect'
+        logo.src = '/static/images/poope.png'
         alreadyFartedWeak = false
         disconFart.muted = false;
         disconFart.volume = 1.0;
@@ -87,6 +88,7 @@ connectWallet.addEventListener('click', (event) => {
         connFart.play()
         speechBubble.innerHTML = 'lmao...wallet connected<br>i guess'
         connectWallet.innerHTML = 'Disconnect'
+        logo.src = '/static/images/poope-sun.png'
         alreadyFartedWeak = true
     }
 })
