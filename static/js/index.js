@@ -9,6 +9,7 @@ const connectWallet = document.getElementById('connect-wallet');
 const cookiePopup = document.getElementById('cookie-popup')
 const acceptCookies = document.getElementById('accept-cookies')
 const vibratables = document.querySelectorAll('.vibratable');
+const buy = document.getElementById('buy-poopec');
 
 const helloCockSucker = `
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡶⠟⠛⠉⠙⠻⢿⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -96,6 +97,14 @@ connectWallet.addEventListener('click', (event) => {
 const scheduleSpeech = (text, delay, callback) => {
     speechQueue.push({text, delay, callback});
 };
+
+buy.addEventListener('mouseenter', event => {
+    logo.src = '/static/images/poope-buy.png'
+})
+
+buy.addEventListener('mouseleave', event => {
+    logo.src = '/static/images/poope.png'
+})
 
 speechBubble.addEventListener('mouseenter', (event) => {
     const originalHtml = event.target.innerHTML
