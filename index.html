@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>POOPE - $XPOOPE</title>
+    <meta name="description" content="Ape in and embrace the poopocalypse now."/>
+    <link rel="canonical" href="https://poope.org/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a142bcd3be.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+    <link href="static/css/index.css" rel="stylesheet"/>
+    <meta property="og:title" content="POOPE - $XPOOPE">
+    <meta property="og:description" content="Ape in and embrace the poopocalypse now.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://poope.org/">
+    <meta property="og:image" content="https://poope.org/static/images/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="POOPE - $XPOOPE">
+    <meta name="twitter:description" content="Ape in and embrace the poopocalypse now.">
+    <meta name="twitter:image" content="https://poope.org/static/images/preview.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'spin-slow': 'spin 2s linear infinite',
+                        'fade-in': 'fadeIn 0.5s ease-out'
+                    },
+                    colors: {
+                        background: '#0f0f0f',
+                        text: 'rgb(201 163 45 / var(--tw-text-opacity, 1))',
+                        accent: '#798d3e',
+                        toxic: '#FDD835',
+                        frog: '#66BB6A',
+                        border: '#5D4037',
+                        hovergreen: '#A5D6A7',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+
+<body class="bg-[theme('colors.background')] text-[theme('colors.text')] text-center px-4 sm:px-6 md:px-12 overflow-x-hidden">
+
+<!-- Top-Right Buttons -->
+<div class="fixed top-4 right-4 flex gap-2 z-50">
+    <button id="connect-wallet"
+            class="vibratable bg-yellow-600 text-black px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold hover:scale-105 transition-transform duration-300 shadow-md flex items-center gap-2">
+        <i class="fas fa-wallet"></i>
+        Connect
+    </button>
+    <a href="https://t.me/blum/app?startapp=memepadjetton_POOPEC_Iql1E-ref_wyGuiagVE4" target="_blank"
+       id="buy-poopec"
+       class="vibratable bg-green-600 text-white px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold hover:scale-105 transition-transform duration-300 shadow-md flex items-center gap-2">
+        <i class="fas fa-poo"></i>
+        Buy
+    </a>
+</div>
+
+<!-- Cookie Popup -->
+<div id="cookie-popup"
+     class="fixed bottom-4 left-4 right-4 sm:right-auto sm:w-[400px] bg-[#1a1a1a] text-white p-4 rounded-xl shadow-lg z-50 border border-[#5D4037] animate-fade-in">
+    <p class="text-xs sm:text-sm mb-3 leading-snug">
+        we don’t use cookies.<br>
+        we made this popup solely to assert dominance.<br>
+        click the damn button.
+    </p>
+    <button id="accept-cookies"
+            class="vibratable bg-yellow-600 text-black px-4 py-2 rounded font-bold text-xs sm:text-sm hover:bg-yellow-500 transition-colors">
+        Accept
+    </button>
+</div>
+
+<section id="home" class="text-left max-w-3xl mx-auto py-12">
+    <a href="/"
+       class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-3 drop-shadow-sm crazy select-none block text-left">
+        poo<span class="hover:text-accent transition-colors duration-200 crazy">pe</span>coin
+    </a>
+    <div class="text-sm sm:text-base md:text-lg mb-6 crazy mt-3 text-left">
+        <span class="select-none">$XPOOPE</span>
+    </div>
+    <div class="relative inline-block">
+        <img src="static/images/poope-sun.png" alt="Logo" id="logo"
+             class="max-w-[135px] sm:max-w-[180px] md:max-w-[220px] lg:max-w-[260px] mx-auto mb-8 drop-shadow-[0_0_8px_#c9a32d] select-none cursor-pointer">
+        <div class="speech-bubble sm:block select-none drop-shadow-[0_0_3px_#c9a32d] vibratable" id="bubble">
+            ayyy fren... <br>click 4 majik
+        </div>
+    </div>
+    <p class="select-none crazy text-sm sm:text-md md:text-lg leading-relaxed">
+        It’s me, Poope. Ape into $XPOOPE and embrace the poopecalypse.
+    </p>
+</section>
+
+<section id="brownpeper" class="text-left max-w-3xl mx-auto crazy">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">💩 Brownpaper</h1>
+    <p class="mb-6 text-sm sm:text-md md:text-lg leading-relaxed">In the darkest corners of Solana, a frog and a poop
+        collided in a fever dream. From their unholy union, Poope was born.
+    </p>
+    <p class="mb-10 text-sm sm:text-md md:text-lg leading-relaxed">
+        This ain't just some coin. It's a fecal-fueled cult. A degenerate uprising. A full-blown blockchain bowel
+        eruption.
+    </p>
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mt-8 mb-4">🧻 Poopenomics</h2>
+    <table class="table-auto w-full text-xs sm:text-sm md:text-base border mb-6">
+        <tbody>
+        <tr>
+            <td class="border px-2 py-1 font-bold">Total Supply</td>
+            <td class="border px-2 py-1">1,000,000,000</td>
+        </tr>
+        <tr>
+            <td class="border px-2 py-1 font-bold">Symbol</td>
+            <td class="border px-2 py-1">$XPOOPE</td>
+        </tr>
+        <!--        <tr>-->
+        <!--            <td class="border px-2 py-1 font-bold">pump.fun</td>-->
+        <!--            <td class="border px-2 py-1">-->
+        <!--                <a href="https://pump.fun/coin/AHRFQkvN73Fdb2SauU3usbT48vs1GjAspHjvMYgUuUpd" target="_blank">-->
+        <!--                    AHRFQkvN73Fdb2SauU3usbT48vs1GjAspHjvMYgUuUpd-->
+        <!--                </a>-->
+        <!--            </td>-->
+        <!--        </tr>-->
+        </tbody>
+    </table>
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mt-8 mb-2">🚧 Roadpmap</h2>
+    <ul class="list-disc ml-6 mb-6 text-sm sm:text-base md:text-lg">
+        <li><strong>W2</strong>: launch. panic. shitpost.</li>
+        <li><strong>W3</strong>: $XPOOPE cult forms. chart ignores gravity.</li>
+        <li><strong>W4</strong>: dev loses his seed phrase. coin keeps pumping.</li>
+        <li><strong>W5</strong>: BlackRock apes in to short. bankrupt by Tuesday.</li>
+        <li><strong>W6</strong>: SEC opens investigation.</li>
+        <li><strong>W7</strong>: SEC apes in.</li>
+        <li><strong>W8</strong>: Elon tweets “$XPOOPE > gold” then vanishes into the woods.</li>
+        <li><strong>W9</strong>: final flush. $XPOOPE becomes the global reserve.</li>
+    </ul>
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mt-8 mb-2">📢 Community</h2>
+    <ul class="list-disc ml-6 mb-6 text-sm sm:text-base md:text-lg">
+        <li>Telegram: <a href="https://t.me/poopecoin" target="_blank" class="text-accent hover:underline">t.me/poopecoin</a>
+        </li>
+        <li>
+            Community HQ: <a href="https://en.wikipedia.org/wiki/Bellevue_Hospital" target="_blank"
+                             class="text-accent hover:underline">
+            Bellevue Hospital</a> — 3rd floor, past the guy screaming about Fartcoin
+        </li>
+    </ul>
+</section>
+
+<audio id="bg-music" src="static/audio/vibe.mp3" loop muted></audio>
+<audio id="fart" src="static/audio/fart.mp3" muted></audio>
+<audio id="connFart" src="static/audio/connected.mp3" muted></audio>
+<audio id="disconFart" src="static/audio/disconnected.mp3" muted></audio>
+<script src="static/js/index.js"></script>
+</body>
+</html>
